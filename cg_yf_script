@@ -1,0 +1,23 @@
+from pycoingecko import CoinGeckoAPI
+import yfinance as yf
+
+
+cg=CoinGeckoAPI()
+
+date="01-01-2021"
+dat=cg.get_coin_history_by_id(id="cardano", vs_currencies='usd',date=date)
+
+price=dat["market_data"]["current_price"]["usd"]
+
+
+
+vti=yf.Ticker("VTI")
+vti.history()
+
+#TODO
+#find volatility of returns
+#compare against volatiltity of s&p
+#
+#compare
+#
+
